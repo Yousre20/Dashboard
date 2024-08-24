@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <link rel="stylesheet" href="./setting.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Settings</h1>
+            <p>Manage your preferences</p>
+        </header>
+
+        <section class="settings-section">
+            <h2>Account</h2>
+            <div class="setting-item">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="setting-item">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="setting-item">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="setting-item">
+                <label for="old-password">Old Password</label>
+                <input type="password" id="old-password" placeholder="Enter old password">
+            </div>
+            <div class="setting-item">
+                <label for="new-password">New Password</label>
+                <input type="password" id="new-password" placeholder="Enter new password">
+            </div>
+            <div class="setting-item">
+                <label for="confirm-password">Confirm New Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm new password">
+            </div>
+            <button onclick="saveChanges()">Save Changes</button>
+        </section>
+
+        <section class="settings-section">
+            <h2>Preferences</h2>
+            <div class="setting-item">
+                <label>Theme</label>
+                <label><input type="radio" name="theme" value="light"> Light</label>
+                <label><input type="radio" name="theme" value="dark"> Dark</label>
+                <label><input type="radio" name="theme" value="system"> System Default</label>
+            </div>
+            <div class="setting-item">
+                <label for="language">Language</label>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label>Email Notifications</label>
+                <input type="checkbox" id="email-notifications">
+            </div>
+            <div class="setting-item">
+                <label>Push Notifications</label>
+                <input type="checkbox" id="push-notifications">
+            </div>
+            <div class="setting-item">
+                <label>SMS Notifications</label>
+                <input type="checkbox" id="sms-notifications">
+            </div>
+        </section>
+
+        <section class="settings-section">
+            <h2>Privacy</h2>
+            <div class="setting-item">
+                <label>Enable Location Access</label>
+                <input type="checkbox" id="location-services">
+            </div>
+            <div class="setting-item">
+                <label>Personalized Ads</label>
+                <input type="checkbox" id="personalized-ads">
+            </div>
+            <div class="setting-item">
+                <label>Share Data with Third Parties</label>
+                <input type="checkbox" id="data-sharing">
+            </div>
+        </section>
+
+        <section class="settings-section">
+            <h2>Security</h2>
+            <div class="setting-item">
+                <label>Enable 2FA</label>
+                <input type="checkbox" id="two-factor-authentication">
+            </div>
+            <div class="setting-item">
+                <label for="2fa-method">2FA Method</label>
+                <select id="2fa-method">
+                    <option value="sms">SMS</option>
+                    <option value="auth-app">Authenticator App</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="settings-section">
+            <h2>Support</h2>
+            <a href="#">Help Center</a><br>
+            <a href="#">Contact Support</a><br>
+            <button>Report a Problem</button>
+        </section>
+
+        <section class="settings-section">
+            <h2>About</h2>
+            <p>App Version: 1.0.0</p>
+            <a href="#">Terms of Service</a><br>
+            <a href="#">Privacy Policy</a>
+        </section>
+
+        <section class="settings-section">
+            <button onclick="logout()">Logout</button>
+        </section>
+
+    </div>
+
+    <script src="./setting.js"></script>
+</body>
+</html>
